@@ -1,0 +1,32 @@
+{
+  "name": "image-loader-vue",
+  "version": "1.0.0",
+  "description": "Vue component for pre-loading images",
+  "main": "dist/image-loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node_modules/.bin/babel src/image-loader.js --watch -o dist/image-loader.min.js",
+    "build": "node_modules/.bin/babel src/image-loader.js -o dist/image-loader.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://SepehrAmoorPour@github.com/SepehrAmoorPour/image-loader-vue.git"
+  },
+  "keywords": [
+    "vuejs2",
+    "vuejs",
+    "vue",
+    "image",
+    "image-loader"
+  ],
+  "author": "Sepehr Amoor Pour <sepehr.amoor.pour@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SepehrAmoorPour/image-loader-vue/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-babili": "0.0.12",
+    "babel-preset-env": "^1.4.0"
+  }
+}
