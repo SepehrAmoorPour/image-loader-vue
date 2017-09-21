@@ -1,4 +1,6 @@
-const ImageLoader = {
+import Vue from 'vue';
+
+const ImageLoader = Vue.extend({
   props: [
     'src'
   ],
@@ -10,15 +12,14 @@ const ImageLoader = {
   mounted () {
     const image = new Image();
     image.onload = function () {
-      this.$refs.imageContainer.append(image);
+      this.$refs.imageContainer.appendChild(image);
       this.loadingImage = false;
     }.bind(this);
     image.src = this.src;
   },
-  render: function(h) {
-    return h('div', {ref: "imageContainer"},
-            h('slot', {attrs: {name: 'loader', 'v-if': 'loadingImage'}}))
-  }
-};
+  template: '<div ref="imageContainer">' +
+              '<slot name="loader" v-if="loadingImage"></slot>' +
+            '</div>'
+});
 
 export default ImageLoader;
